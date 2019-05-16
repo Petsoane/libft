@@ -1,0 +1,6 @@
+# Logs for all extra files created by the op. #
+.DS_store
+.DS_store?
+*.swap
+._*
+
