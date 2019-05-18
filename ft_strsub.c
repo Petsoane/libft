@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 09:17:32 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/18 11:35:43 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/18 11:01:22 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/18 11:34:47 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strequ(char const *s1, char const *s2)
+#include <stdlib.h>
+
+char	*ft_strsub(char const *s1, unsigned int start, size_t len)
 {
-	int size1;
-	int size2;
+	char	*out;
+	int		i;
 
-	size1 = 0;
-	size2 = 0;
-
-	while (s1[size1])
-		size1++;
-	while (s2[size2])
-		size2++;
-	if (size1 < size2 || size1 > size2)
-		return (0);
-	while (*s1)
-	{
-		if (*s1 != *s2)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (1);
+	i = 0;
+	out = (char *)malloc(len + 1);
+	if (!out || !len || !s1)
+		return (NULL);
+	s1 += start;
+	while (*s1 && len--)
+		out[i++] = *s1++;
+	out[i] = '\0';
+	return (out);
 }
