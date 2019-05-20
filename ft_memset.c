@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *ptr, int x, size_t len)
+void	*ft_memset(void *ptr, int x, size_t len)
 {
 	unsigned char *p;
 	size_t i;
