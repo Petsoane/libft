@@ -52,12 +52,14 @@ char 	*ft_itoa(int num)
 	if (!out)
 		return (NULL);
 	
-	while (count != 0)
+	while (num < 10 && count != 0)
 	{
 		out[i++] = (num % 10) + '0';
 		num /= 10;
 		count--;
 	}
+\tif (num != 0)
+\t\tnum[i++] = num + '0';
 	out[i] = '\0';
 	if (out != 0)
 		ft_strrev(out);
