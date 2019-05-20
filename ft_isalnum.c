@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:52:32 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 13:54:34 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/20 16:39:59 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/20 16:41:44 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char const *s)
-{
-	int len;
+int		ft_isalpha(int ch);
+int		ft_isdigit(int num);
 
-	len = 0;
-	while (*s++)
-		len++;
-	return (len + 1);
+int		ft_isalnum(int num)
+{
+	return (ft_isalpha(num) && ft_isdigit(num));
 }
+

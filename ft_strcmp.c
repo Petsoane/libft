@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:52:32 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 13:54:34 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/20 14:48:17 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/20 14:57:58 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char const *s)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	int len;
-
-	len = 0;
-	while (*s++)
-		len++;
-	return (len + 1);
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+	}
+	return (0);
 }

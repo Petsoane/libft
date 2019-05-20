@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:52:32 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 13:54:34 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/20 14:59:49 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/20 15:06:45 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char const *s)
-{
-	int len;
+#include <stdlib.h>
 
-	len = 0;
-	while (*s++)
-		len++;
-	return (len + 1);
+int		ft_strncmp(const char *s1, const char *s2, size_t len)
+{
+	while (*s1 && *s2 && len > 0)
+	{
+		if (*s2 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+		len--;
+	}
+	return (0);
 }
