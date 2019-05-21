@@ -6,16 +6,18 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:41:24 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 09:25:54 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:11:04 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
 		if (*s == c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	return (NULL);

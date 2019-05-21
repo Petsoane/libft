@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:19:04 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 14:17:09 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:09:52 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
 int		ft_strlen(char const *s);
 

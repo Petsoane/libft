@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:47:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 14:54:38 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:52:32 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ char	**ft_strsplit(char const *s, char c)
 		if (*temp != c)
 		{
 			out[i] = (char *)malloc(sizeof(char) * ft_wordlen(temp,c));
-			printf("%d\n", ft_wordlen(temp, c));
 			while (*temp && *temp != c)
 			{
 				out[i][j] = *temp++;
-				printf("\t\tout:%c\n", out[i][j]);
 				j++;
 			}
 			out[i][j] ='\0';

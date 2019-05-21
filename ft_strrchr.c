@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strrchar.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:37:59 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 16:04:35 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/19 15:45:14 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/21 16:51:56 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_putnbr_fd(int num, int fd)
+char	*ft_strrchr(const char *s, int c)
 {
-	char ch;
-	char sign;
+	int i;
 
-	if (num < 0)
+	i = 0;
+	while (s[i])
+		i++;
+	while (i >= 0)
 	{
-		sign = '-';
-		write(fd, &sign, 1);
-		num = -num;
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
 	}
-	if (num < 10)
-	{
-		ch = (num % 10) + '0';
-	}
-	else
-	{
-		ch = (num % 10) + '0';
-		ft_putnbr_fd(num / 10, fd);
-	}
-	write(fd, &ch, 1);
+	return (NULL);
 }

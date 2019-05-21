@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:06:11 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/19 15:13:49 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:36:56 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char const *dest, char const *src)
+char	*ft_strcpy(char *dst, char const *src)
 {
 	int i;
 

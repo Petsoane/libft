@@ -6,16 +6,17 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:06:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 15:49:30 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:44:37 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef LIBFT_H
+#ifndef LIBFT_H
 #	define LIBFT_H
-#	include <stdlib.h>
+#	include <string.h>
 
+void	*ft_memset(void *s, int c, size_t len);
 void 	*ft_memalloc(size_t size);
-void 	*ft_memalloc(size_t size);i
+void 	*ft_memalloc(size_t size);
 char 	*ft_strnew(size_t size);
 void 	ft_strclr(char *s);
 void 	ft_striter(char *s, void (*f)(char *));
@@ -55,12 +56,14 @@ int		ft_tolower(int ch);
 int		ft_toupper(int ch);
 char 	*ft_itoa(int n);
 char	**ft_strsplit(char const *s, char c);
+char	*ft_strdup(char const *s);
+int		ft_strlen(char const *s);
 
-typedef  struct 	s_list
+typedef  struct 		s_list
 {
 	
-	void			*data;
-	size_t			d_size;
-	struct			*next;
-}					t_list;
+	void				*data;
+	size_t				d_size;
+	struct s_list		*next;
+}						t_list;
 #endif

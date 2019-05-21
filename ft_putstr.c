@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:46:56 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 09:20:14 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 16:08:34 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
 void	ft_putstr(char *s)
 {

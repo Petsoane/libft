@@ -6,7 +6,7 @@
 #    By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 08:07:20 by lpetsoan          #+#    #+#              #
-#    Updated: 2019/05/20 08:23:10 by lpetsoan         ###   ########.fr        #
+#    Updated: 2019/05/21 15:54:38 by lpetsoan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,20 +73,20 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-    @ar rc $(NAME) $(OBJ)
-    @echo "$(NAME) created"
-    @ranlib $(NAME)
-    @echo "$(NAME) indexed"
+	@ar rc $(NAME) $(OBJ)
+	@echo "$(NAME) created"
+	@ranlib $(NAME)
+	@echo "$(NAME) indexed"
 
 %.o: %.c
-    @gcc $(FLAG) -c $< -o $@
+	@gcc $(FLAG) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
 	@echo "OBJ deleted"
 
 fclean: clean
-    @rm -f $(NAME)
-    @echo "$(NAME) deleted"
+	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
 
 re: fclean all

@@ -6,9 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:44:16 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 08:36:06 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:57:22 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 void	*ft_memset(void *ptr, int x, size_t len)
 {
