@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 15:07:22 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 15:26:38 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/21 08:14:18 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/21 08:17:04 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(char *num)
 {
-	int 	base;
-	int		out;
-	int		start;
-	
+	int base;
+	int	out;
+	int	start;
+
 	start = 0;
 	base = 1;
 	out = 0;

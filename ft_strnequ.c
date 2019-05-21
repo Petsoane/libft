@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 10:09:05 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/18 10:50:25 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 09:40:50 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 			return (0);
 		n--;
 	}
-	return(1);
+	return (1);
 }

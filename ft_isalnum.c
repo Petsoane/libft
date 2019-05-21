@@ -6,15 +6,13 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:39:59 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 16:41:44 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:20:16 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalpha(int ch);
-int		ft_isdigit(int num);
+#include "libft.h"
 
 int		ft_isalnum(int num)
 {
 	return (ft_isalpha(num) && ft_isdigit(num));
 }
-

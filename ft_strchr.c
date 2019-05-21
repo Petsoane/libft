@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:41:24 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/19 15:43:32 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 09:25:54 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char 	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
@@ -18,6 +18,5 @@ char 	*ft_strchr(const char *s, int c)
 			return (s);
 		s++;
 	}
-
 	return (NULL);
 }

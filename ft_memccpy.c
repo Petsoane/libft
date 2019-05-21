@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:36:56 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 09:12:48 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:30:20 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	ch = c;
 	while (n > 0)
 	{
-		
 		*temp_dst = *temp_src;
-		
 		temp_src++;
 		n--;
 		if (*temp_dst == ch)
@@ -34,7 +32,6 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 			return ((void *)temp_dst);
 		}
 		temp_dst++;
-
 	}
 	return (NULL);
 }

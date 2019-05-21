@@ -6,13 +6,12 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:33:38 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/19 15:39:37 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 09:32:56 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-int		ft_strlen(char const *s);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, char const *src, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:37:59 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/19 14:41:06 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:41:12 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	ft_putnbr_fd(int num, int fd)
 	}
 	if (num < 10)
 	{
-		ch = (num % 10 ) + '0';
+		ch = (num % 10) + '0';
 	}
 	else
 	{
-		ch = (num % 10 ) + '0';
+		ch = (num % 10) + '0';
 		ft_putnbr(num / 10);
 	}
 	write(fd, &ch, 1);

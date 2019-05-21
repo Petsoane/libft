@@ -6,13 +6,12 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:06:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 16:45:27 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 15:49:30 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifdef LIBFT_H
 #	define LIBFT_H
-
 #	include <stdlib.h>
 
 void 	*ft_memalloc(size_t size);
@@ -30,6 +29,7 @@ char 	*ft_strjoin(char const *s1, char const *s2);
 char 	*ft_strtrim(char const *s);
 char 	**ft_strsplit(char const *s, char c);
 char 	*ft_itoa(int n);
+char	*ft_strtrimc(char const *s, char c);
 void 	ft_putchar(char c);
 void 	ft_putstr(char const *s);
 void 	ft_putendl(char const *s);
@@ -45,6 +45,22 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		*ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strstr(const char *n, const char *h);
 char	*ft_strnstr(const char *n, const char *h, size_t len);
+int 	ft_atoi(const char *num);
+int		ft_isalpha(int ch);
+int		ft_isascii(int ch);
+int 	ft_isdigit(int ch);
+int		ft_isalnum(int ch);
+int 	ft_isprint(int ch);
+int		ft_tolower(int ch);
+int		ft_toupper(int ch);
+char 	*ft_itoa(int n);
+char	**ft_strsplit(char const *s, char c);
 
+typedef  struct 	s_list
+{
+	
+	void			*data;
+	size_t			d_size;
+	struct			*next;
+}					t_list;
 #endif
-

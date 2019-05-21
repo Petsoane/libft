@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 16:33:03 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 08:21:58 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/21 08:04:21 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/21 10:10:43 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int num)
+int	ft_toupper(int num)
 {
 	if (num >= 'a' && num <= 'z')
-		return (1);
-	else if (num >= 'A' && num <= 'Z')
-		return (1);
-	return (0);
+		return (num - 32);
+	return (num);
 }

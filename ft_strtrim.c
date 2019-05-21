@@ -6,26 +6,23 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:04:15 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/18 12:30:08 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 10:04:51 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strtrim(char const *str)
 {
 	char	*out;
 	char	curr;
 	int		i;
-	int 	is_start;
-	int 	size;
+	int		is_start;
 
-	size = 0;
 	i = 0;
 	is_start = 1;
-	while (str[size])
-		size++;
-	out = (char *)malloc(size);
+	out = (char *)malloc(ft_strlen(str));
 	if (!out)
 		return (NULL);
 	while (*str)
@@ -39,8 +36,7 @@ char	*ft_strtrim(char const *str)
 		is_start = 0;
 		out[i++] = *str++;
 	}
-	i -= 1;
-	while (i != 0 && (out[i] == ' '|| out[i] == '\t' || out[i] == '\n'))
+	while ((i - 1) != 0 && (out[i] == ' ' || out[i] == '\t' || out[i] == '\n'))
 		i--;
 	out[i + 1] = '\0';
 	return (out);

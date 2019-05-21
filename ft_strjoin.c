@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:37:39 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/18 12:00:26 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 09:32:03 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int 	size1;
-	int 	size2;
-	int 	o_size;
-	int 	i;
-	char 	*out;
+	int		size1;
+	int		size2;
+	int		o_size;
+	int		i;
+	char	*out;
 
 	i = 0;
 	size1 = 0;
 	size2 = 0;
 	while (s1[size1])
 		size1++;
-	while(s2[size2])
+	while (s2[size2])
 		size2++;
 	o_size = size1 + size2;
 	out = (char *)malloc(o_size - 1);

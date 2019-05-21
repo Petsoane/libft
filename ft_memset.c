@@ -6,14 +6,14 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:44:16 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/19 14:48:50 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/21 08:36:06 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *ptr, int x, size_t len)
 {
-	unsigned char *p;
-	size_t i;
+	unsigned char	*p;
+	size_t			i;
 
 	i = 0;
 	p = (unsigned char *)ptr;

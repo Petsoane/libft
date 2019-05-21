@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 16:33:03 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 08:21:58 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/21 09:35:34 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/21 09:37:09 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int num)
+#include <stdlib.h>
+
+char	*ft_strmapi(char const *s, char (*f)(char c))
 {
-	if (num >= 'a' && num <= 'z')
-		return (1);
-	else if (num >= 'A' && num <= 'Z')
-		return (1);
-	return (0);
+	char	*str;
+	int		size;
+	int		i;
+
+	size = 0;
+	i = 0;
+	while (s[size])
+		size++;
+	str = (char *)malloc(size);
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(s[i]);
+		i++;
+	}
+	return (str);
 }
