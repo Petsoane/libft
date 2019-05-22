@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:06:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 16:44:37 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/22 13:00:55 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_strdup(char const *s);
 int		ft_strlen(char const *s);
 
+
 typedef  struct 		s_list
 {
 	
@@ -66,4 +67,5 @@ typedef  struct 		s_list
 	size_t				d_size;
 	struct s_list		*next;
 }						t_list;
+t_list	*ft_lstnew(void const *cont, size_t c_size);
 #endif

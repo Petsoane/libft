@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/19 14:55:22 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 17:01:23 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/22 12:36:08 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/22 13:25:20 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strdup(char const *s)
+t_list	*ft_lstnew(void const *cont, size_t c_size)
 {
-	char	*out;
-	int		size;
-	int		i;
-
-	i = 0;
-	size = ft_strlen(s);
-	out = (char *)malloc(sizeof(char) * size);
-	while (*s)
-		out[i++] = *s++;
+	t_list	*out;
+	void 	*cpy;
+	
+	cpy = malloc(c_size);
+	cpy = ft_memcpy(cpy, cont, c_size);
+	out = (t_list *)malloc(sizeof(t_list));
+	if (!out)
+		return (NULL);
+	if (cont == NULL)
+	{
+		out->data= NULL;
+		out->d_size = 0;
+		out->next = NULL;
+	}
+	else
+	{
+		out->data = (void *)cpy;
+		out->d_size = c_size;
+		out->next = NULL;
+	}
 	return (out);
 }
