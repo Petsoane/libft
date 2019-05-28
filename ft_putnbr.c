@@ -6,11 +6,12 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:57:17 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 08:40:30 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:54:15 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putnbr(int num)
 {
@@ -32,5 +33,5 @@ void	ft_putnbr(int num)
 		ch = (num % 10) + '0';
 		ft_putnbr(num / 10);
 	}
-	write(1, &ch, 1);
+	ft_putchar(ch);
 }
