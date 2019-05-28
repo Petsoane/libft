@@ -6,50 +6,34 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:19:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/20 14:37:28 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 13:21:33 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-int		ft_strlen(char const *s);
-
-char	*ft_strnstr(const char *n, const char *h, size_t len)
+char	*ft_strstr(const char *n, const char *h, size_t n)
 {
-	int 	i;
-	int 	size_h;
-	int 	size_n;
-	char const	*p;
+	int		i;
 
-	if (h == NULL)
-		return (NULL);
 	i = 0;
-	size_n = ft_strlen(n);
-	size_h = ft_strlen(h);
-	while (*h && (size_h - size_n) > 0  && len > 0)
+	while (*h && n--)
 	{
-		if (*h == n[0])
+			i = 0;
+		while (*(h + i) == n[i] && n--)
 		{
-			p = h;
-			while (n[i] && *h && len > 0)
+			if (n[i + 1] == '\0')
 			{
-					
-				if (*h != n[i])
-				{
-					p = NULL;
-					i = 0;
-					break;
-				}
-				h++;
-				size_h--;
-				i++;
-				len--;
+				return ((char *)h);
 			}
+			i++;
 		}
 		h++;
-		size_h--;
-		len--;
-	}	
-	return ((char *)p);
+	}
+	return (NULL);
+
 }
+
+
 

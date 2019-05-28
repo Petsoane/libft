@@ -6,13 +6,12 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:19:04 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 13:14:58 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 13:22:02 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strstr(const char *n, const char *h)
 {
