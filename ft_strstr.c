@@ -6,27 +6,32 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:19:04 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 13:22:02 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:23:26 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
 
-char	*ft_strstr(const char *n, const char *h)
+char	*ft_strstr(const char *h, const char *n)
 {
 	int		i;
+	int		size_n;
+	int		size_h;
+
 
 	i = 0;
+	size_n = ft_strlen(n);
+	size_h = ft_strlen(h);
+	if (size_n == 0)
+		return ((char *)h);
 	while (*h)
 	{
-			i = 0;
+		i = 0;
 		while (*(h + i) == n[i])
 		{
 			if (n[i + 1] == '\0')
-			{
 				return ((char *)h);
-			}
 			i++;
 		}
 		h++;
