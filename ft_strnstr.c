@@ -6,22 +6,22 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:19:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 13:21:33 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 13:25:26 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strstr(const char *n, const char *h, size_t n)
+char	*ft_strnstr(const char *n, const char *h, size_t size)
 {
 	int		i;
 
 	i = 0;
-	while (*h && n--)
+	while (*h && size--)
 	{
 			i = 0;
-		while (*(h + i) == n[i] && n--)
+		while (*(h + i) == n[i] && size--)
 		{
 			if (n[i + 1] == '\0')
 			{

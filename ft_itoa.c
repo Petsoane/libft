@@ -6,13 +6,15 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 11:41:42 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 10:25:39 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 14:26:05 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
-void	ft_strrev(char *s)
+
+char *	ft_strrev(char *s)
 {
 	char *start;
 	char *end;
@@ -28,14 +30,15 @@ void	ft_strrev(char *s)
 		*start++ = *end;
 		*end-- = temp;
 	}
+	return (s);
 }
 
 char	*ft_itoa(int num)
 {
-	char	*out;
-	int		size;
-	int		temp;
-	int		i;
+	char		*out;
+	long		size;
+	long		temp;
+	int			i;
 
 	i = 0;
 	temp = num;
@@ -45,13 +48,16 @@ char	*ft_itoa(int num)
 		size += 1;
 		temp /= 10;
 	}
-	out = (char *)malloc(sizeof(char) * size);
+	out = (char *)malloc(sizeof(char) * size + 1);
+	if (!out)
+		return (NULL);
 	while (num > 10)
 	{
 		out[i++] = (num % 10) + (int)'0';
 		num /= 10;
 	}
 	out[i] = num + '0';
+	out[i + 1] = '\0';
 	ft_strrev(out);
 	return (out);
 }

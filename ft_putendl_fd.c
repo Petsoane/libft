@@ -6,15 +6,16 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 14:32:52 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 16:02:07 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 14:30:42 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
 	while (*s)
 		write(fd, s++, 1);
-	write(fd,(void *) '\n', 1);
+	ft_putchar_fd(fd, '\n');
 }

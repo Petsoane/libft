@@ -6,17 +6,17 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 08:14:18 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/27 11:02:19 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/28 13:52:25 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int		ft_atoi(const char *num)
 {
-	int base;
-	int	out;
-	int	start;
-	int	end;
+	long base;
+	long out;
+	long start;
+	long end;
 
 	end = 0;
 	start = 0;
@@ -34,5 +34,5 @@ int		ft_atoi(const char *num)
 	}
 	out += (num[start] - '0') * base;
 	out *= num[0] == '-' ? -1 : 1;
-	return (out);
+	return ((long)out);
 }
