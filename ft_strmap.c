@@ -6,13 +6,13 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 09:35:34 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 09:37:09 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/24 12:11:46 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strmapi(char const *s, char (*f)(char c))
+char	*ft_strmap(char const *s, char (*f)(char c))
 {
 	char	*str;
 	int		size;

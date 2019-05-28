@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:48:17 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/27 13:11:10 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/24 13:29:38 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/24 13:33:14 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_strcmp(const char *s1, const char *s2)
+void	ft_lstadd(t_list **h_node, t_list *new_node)
 {
-	int size_1;
-	int size_2;
-
-	size_1 = ft_strlen(s1);
-	size_2 = ft_strlen(s2);
-	if (size_1 == 0 || size_2 == 0)
-		return size_1 - size_2;
-	while (*s1 && *s2)
-	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
-	}
-	return (0);
+	new_node->next = *h_node;
+	*h_node = new_node;
 }

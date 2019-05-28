@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:48:17 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/27 13:11:10 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/24 12:48:42 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/24 13:22:00 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+void	ft_lstdel(t_list **node, void (*del)(void *, size_t len))
 {
-	int size_1;
-	int size_2;
+	t_list	**prev;
 
-	size_1 = ft_strlen(s1);
-	size_2 = ft_strlen(s2);
-	if (size_1 == 0 || size_2 == 0)
-		return size_1 - size_2;
-	while (*s1 && *s2)
+	prev = NULL;
+	while (!(*node))
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		del((*node)->data, (*node)->d_size);
+		*prev = (*node);
+		(*node) = (*node)->next;
+		free(*prev);
+		*prev = NULL;
 	}
-	return (0);
+	*prev = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:06:11 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 16:36:56 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/27 08:01:44 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@ char	*ft_strcpy(char *dst, char const *src)
 	i = 0;
 	while (*src)
 		dst[i++] = *src++;
+	dst[i] = '\0';
 	return (dst);
 }

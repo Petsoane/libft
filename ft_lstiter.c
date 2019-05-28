@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/17 07:19:19 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/17 07:27:23 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/24 13:34:42 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/24 13:40:02 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_strclear(char *str)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	while (*str)
-		*str++ = '\0';
+	while (!lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }

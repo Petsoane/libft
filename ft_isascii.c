@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:42:18 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 08:22:53 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:05:47 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iascii(int num)
+int	ft_isascii(int num)
 {
 	if (num >= 0 && num <= 127)
 		return (1);

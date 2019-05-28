@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 15:26:24 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 16:45:59 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/27 08:09:00 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	*ft_strncat(char *dst, char const *src, size_t n)
 	i = 0;
 	while (dst[i])
 		i++;
-	i -= 1;
-	while (n > 0)
+	while (*src && n > 0)
 	{
 		dst[i++] = *src++;
 		n--;
 	}
+	dst[i] = '\0';
 	return (dst);
 }

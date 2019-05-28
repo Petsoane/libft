@@ -6,13 +6,13 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 07:58:38 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 15:59:49 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/27 11:20:33 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int num)
 {
-	if (num > 32 && num < 127)
+	if (num >= 32 && num <= 126)
 		return (1);
 	return (0);
 }
