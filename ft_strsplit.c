@@ -1,115 +1,81 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strsplit2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 12:47:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 09:17:55 by lpetsoan         ###   ########.fr       */
+/*   Created: 2019/05/30 13:32:09 by lpetsoan          #+#    #+#             */
+/*   Updated: 2019/05/30 14:14:50 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
+static int	wordcount(char const *s, char c);
+static int	wordlen(char const *s, char c);
 
-static int		ft_wordcount(char const *s, char c);
-static int		ft_wordlen(char const *s, char c);
-static char		*ft_strtrimc(char const *s, char c);
-
-char			**ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
-	char	**out;
-	char 	*temp;
 	int		i;
 	int		j;
+	char	**out;
 
-	j = 0;	
 	i = 0;
-	temp = ft_strtrimc(s, c);
-	out = (char **)malloc(sizeof(char **) * ft_wordcount(temp, c));
+	j = 0;
+	out = (char **)malloc(sizeof(char *) * wordcount(s,c));
 	if (!out)
 		return (NULL);
-	while (*temp)
-	{
-		if (*temp != c)
-		{
-			out[i] = (char *)malloc(sizeof(char) * ft_wordlen(temp,c));
-			if (!out[i])
-				return (NULL);
-			while (*temp && *temp != c)
-			{
-				out[i][j] = *temp++;
-				j++;
-			}
-			out[i][j] ='\0';
-			j = 0;
-			i++;
-		}
-		temp++;
-	}
-	return (out);
-}
-
-static int		ft_wordlen(char const *s, char c)
-{
-	int		w_len;
-
-	w_len = 0;
-	while (*s != c && *s)
-	{
-		s++;
-		w_len++;
-	}
-	return (w_len);
-}
-
-static int		ft_wordcount(char const *s, char c)
-{
-	int		w_count;
-
-	if (!*s)
-		return (0);
-	w_count = 0;
 	while (*s)
 	{
-		if (*s == c)
-			w_count++;
+		j = 0;
+		while (*s && *s == c)
+			s++;
+		if (!*s)
+			break;
+		out[i] = (char *)malloc(sizeof(char) * wordlen(s, c) + 1);
+		if (!out)
+			return (NULL);
+		while (*s && *s != c)
+		{
+			out[i][j] = *s;
+			s++;
+			j++;
+		}
+		out[i][j] = '\0';
+		i++;
+	}
+	//printf("%d\n", wordcount(s, c));
+	return (out);
+}
+static int wordlen(char const *s, char c)
+{
+	int len;
+
+	len = 0;
+	while (*s != c)
+	{
+		len++;
 		s++;
 	}
-	return (w_count + 1);
+	return (len);
 }
 
-static char		*ft_strtrimc(char const *str, char c)
+static int	wordcount(char const *s,char c)
 {
-	
-	char	*out;
-	char	curr;
-	int		i;
-	int 	is_start;
-	int 	size;
+	int	count;
 
-	size = 0;
-	i = 0;
-	is_start = 1;
-	while (str[size])
-		size++;
-	out = (char *)malloc(size);
-	if (!out)
-		return (NULL);
-	while (*str)
+	count = 0;
+	while (*s)
 	{
-		curr = *str;
-		if (curr == c && is_start == 1)
+		while (*s && *s == c)
+			s++;
+		while (*s && *s != c)
 		{
-			str++;
-			continue;
+			if (*(s + 1) == c)
+				count++;
+			s++;
 		}
-		is_start = 0;
-		out[i++] = *str++;
 	}
-	i -= 1;
-	while (i != 0 && out[i] == c)
-		i--;
-	out[i + 1] = '\0';
-	return (out);
-}	
+	return (count);
+}

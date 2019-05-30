@@ -6,13 +6,14 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:06:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 09:39:18 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 13:58:48 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #	define LIBFT_H
 #	include <string.h>
+#	include <stdlib.h>
 
 typedef  struct 		s_list
 {
