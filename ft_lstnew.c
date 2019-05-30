@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:36:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/24 08:22:37 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:41:55 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ t_list	*ft_lstnew(void const *cont, size_t c_size)
 		return (NULL);
 	if (cont == NULL)
 	{
-		out->data= NULL;
-		out->d_size = 0;
+		out->content= NULL;
+		out->content_size= 0;
 		out->next = NULL;
 	}
 	else
 	{
-		out->data = (void *)cpy;
-		out->d_size = c_size;
+		out->content = (void *)cpy;
+		out->content_size= c_size;
 		out->next = NULL;
 	}
 	return (out);

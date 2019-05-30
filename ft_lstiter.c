@@ -6,9 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:34:42 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/24 13:40:02 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:42:28 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {

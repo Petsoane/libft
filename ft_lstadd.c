@@ -6,9 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 13:29:38 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/24 13:33:14 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:42:33 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_lstadd(t_list **h_node, t_list *new_node)
 {

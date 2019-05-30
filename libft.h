@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 08:06:08 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 16:19:38 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 09:39:18 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 typedef  struct 		s_list
 {
 	
-	void				*data;
-	size_t				d_size;
+	void				*content;
+	size_t				content_size;
 	struct s_list		*next;
 }						t_list;
 void	*ft_memset(void *s, int c, size_t len);
@@ -51,7 +51,7 @@ void	*ft_memccpy(void *dst, const void *src,int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	ft_memdel(void **ptr);
-void	ft_bzero(void *s, int n);
+void	ft_bzero(void *s, size_t n);
 int		*ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strstr(const char *n, const char *h);
 char	*ft_strnstr(const char *n, const char *h, size_t len);
@@ -69,12 +69,14 @@ char	*ft_strdup(char const *s);
 int		ft_strlen(char const *s);
 char	*ft_strcpy(char *dst, char const *src);
 char	*ft_strcat(char *dst, char const *src);
+char	*ft_strncat(char *dst, char const *src, size_t n);
 char	*ft_strncpy(char *dst, char const *src, size_t n);
 size_t	ft_strlcat(char *dst, char const *src, size_t n);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	ft_strdel(void **s);
+void	ft_strdel(char **s);
 t_list	*ft_lstnew(void const *cont, size_t c_size);
 void	ft_lstdelone(t_list **node, void (*del)(void *, size_t len));
 void	ft_lstdel(t_list **node, void (*del)(void *, size_t len));
