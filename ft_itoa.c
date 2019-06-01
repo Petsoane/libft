@@ -6,41 +6,51 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 11:41:42 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 14:26:05 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/05/30 16:02:53 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-
-char *	ft_strrev(char *s)
+char *	ft_strrev(char **s)
 {
-	char *start;
-	char *end;
-	char temp;
+	int     len;
+	int     i;
+    char    *out;
 
-	start = s;
-	while (*s)
-		s++;
-	end = s - 1;
-	while (start != end)
-	{
-		temp = *start;
-		*start++ = *end;
-		*end-- = temp;
-	}
-	return (s);
+    i = 0;
+    len = ft_strlen(*s);
+    out = (char *)malloc(sizeof(char) * len);
+    while (--len >= 0)
+    {
+        out[i] = (*s)[len];
+        i++;
+    }
+    out[i] = '\0';
+    free(*s);
+    *s = NULL;
+    return (out);
 }
 
 char	*ft_itoa(int num)
 {
 	char		*out;
+	char		*s_temp;
 	long		size;
 	long		temp;
 	int			i;
-
+	int			isneg;
+	
 	i = 0;
+	isneg = 0;
+	if (num == 0)
+		return (ft_strdup("0"));
+	if (num < 0)
+	{
+		isneg = 1;
+		num *= -1;
+	}
 	temp = num;
 	size = 0;
 	while (temp > 10)
@@ -48,16 +58,20 @@ char	*ft_itoa(int num)
 		size += 1;
 		temp /= 10;
 	}
-	out = (char *)malloc(sizeof(char) * size + 1);
-	if (!out)
+	if (isneg == 1)
+		s_temp = (char *)malloc(sizeof(char) * size + 3);
+	else
+		s_temp = (char *)malloc(sizeof(char) * size + 2);
+	if (!s_temp)
 		return (NULL);
-	while (num > 10)
+	while (num != 0)
 	{
-		out[i++] = (num % 10) + (int)'0';
+		s_temp[i++] = (num % 10) + (int)'0';
 		num /= 10;
 	}
-	out[i] = num + '0';
-	out[i + 1] = '\0';
-	ft_strrev(out);
+	if (isneg == 1)
+		s_temp[i++] = '-';
+	s_temp[i] = '\0';
+	out = ft_strrev(&s_temp);
 	return (out);
 }
