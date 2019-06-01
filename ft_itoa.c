@@ -6,14 +6,14 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 11:41:42 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 16:02:53 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/01 10:58:05 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char *	ft_strrev(char **s)
+static char		*ft_strrev(char **s)
 {
 	int     len;
 	int     i;
@@ -33,7 +33,18 @@ char *	ft_strrev(char **s)
     return (out);
 }
 
-char	*ft_itoa(int num)
+static char		*ft_ifalloc(int isneg, int size)
+{
+	char *out;
+
+	if (isneg == 1)
+		out = (char *)malloc(sizeof(char) * size + 3);
+	else
+		out = (char *)malloc(sizeof(char) * size + 2);
+	return (out);
+}
+
+char			*ft_itoa(int num)
 {
 	char		*out;
 	char		*s_temp;
@@ -58,10 +69,7 @@ char	*ft_itoa(int num)
 		size += 1;
 		temp /= 10;
 	}
-	if (isneg == 1)
-		s_temp = (char *)malloc(sizeof(char) * size + 3);
-	else
-		s_temp = (char *)malloc(sizeof(char) * size + 2);
+	s_temp = ft_ifalloc(isneg, size);
 	if (!s_temp)
 		return (NULL);
 	while (num != 0)
