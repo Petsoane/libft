@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:04:15 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 13:22:29 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/04 11:45:36 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strtrim(char const *str)
 	int		i;
 	int		is_start;
 
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	is_start = 1;
 	out = (char *)malloc(ft_strlen(str) + 1);

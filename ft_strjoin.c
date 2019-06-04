@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 11:37:39 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 09:16:41 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/04 11:43:59 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		o_size;
 	char	*out;
 
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 	i = 0;
 	o_size = ft_strlen(s1) + ft_strlen(s2);
 	out = (char *)malloc(o_size - 1);

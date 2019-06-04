@@ -6,14 +6,18 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 08:00:31 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 09:30:34 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/04 11:42:53 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int pos, char *c))
 {
 	int i;
 
+	if (s == NULL)
+		return;
 	i = 0;
 	while (s[i])
 	{

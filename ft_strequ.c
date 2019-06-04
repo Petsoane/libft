@@ -6,15 +6,19 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 09:17:32 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/21 09:29:15 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/04 11:42:01 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {
 	int size1;
 	int size2;
 
+	if (s1 == NULL || s2 == NULL)
+		return (0);
 	size1 = 0;
 	size2 = 0;
 	while (s1[size1])
