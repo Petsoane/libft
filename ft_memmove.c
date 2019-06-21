@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:16:51 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 10:22:41 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/21 07:50:05 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 
 	temp_dst = (unsigned char *)dst;
 	if (!(dst) && !(src))
-		return NULL;
+		return (NULL);
 	temp_src = (unsigned char *)ft_memalloc(n);
 	ft_memcpy(temp_src, src, n);
 	while (n > 0)

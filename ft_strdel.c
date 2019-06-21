@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 15:32:36 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/06/04 11:35:46 by event            ###   ########.fr       */
+/*   Updated: 2019/06/21 07:55:24 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_strdel(char **s)
 {
 	if (s == NULL)
-		return;
+		return ;
 	free(*s);
 	*s = NULL;
 }

@@ -6,14 +6,21 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/18 12:04:15 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/06/04 11:45:36 by event            ###   ########.fr       */
+/*   Updated: 2019/06/21 08:26:14 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *str)
+static void	remove_end(char **out, int i)
+{
+	while (i != 0 && ((*out)[i] == ' ' || (*out)[i] == '\t' || (*out)[i] == '\n'))
+		i--;
+	(*out)[i + 1] = '\0';
+}
+
+char		*ft_strtrim(char const *str)
 {
 	char	*out;
 	char	curr;
@@ -38,9 +45,6 @@ char	*ft_strtrim(char const *str)
 		is_start = 0;
 		out[i++] = *str++;
 	}
-	i--;
-	while (i != 0 && (out[i] == ' ' || out[i] == '\t' || out[i] == '\n'))
-		i--;
-	out[i + 1] = '\0';
+	remove_end(&out, --i);
 	return (out);
 }

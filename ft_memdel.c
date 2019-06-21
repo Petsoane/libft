@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/16 10:47:27 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/06/04 11:35:20 by event            ###   ########.fr       */
+/*   Updated: 2019/06/21 07:49:20 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_memdel(void **p)
 {
-	if (p ==NULL)
-		return;
+	if (p == NULL)
+		return ;
 	free(*p);
 	*p = NULL;
 }

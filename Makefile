@@ -6,7 +6,7 @@
 #    By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 08:07:20 by lpetsoan          #+#    #+#              #
-#    Updated: 2019/05/30 09:38:25 by lpetsoan         ###   ########.fr        #
+#    Updated: 2019/06/21 08:12:24 by lpetsoan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ SRC = ft_atoi.c \
 	  ft_lstdel.c\
 	  ft_lstdelone.c\
 	  ft_lstiter.c\
+	  ft_lstmap.c\
 
 
 OBJ = $(SRC:.c=.o)

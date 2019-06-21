@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:38:38 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 10:16:50 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/21 08:52:01 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (n > 0)
 	{
 		if (*temp_s1 != *temp_s2)
-			return ((int)*temp_s1 - *temp_s2);
+			return ((int)(*temp_s1 - *temp_s2));
 		temp_s1++;
 		temp_s2++;
 		n--;

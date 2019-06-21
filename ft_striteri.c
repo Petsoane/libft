@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 08:00:31 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/06/04 11:42:53 by event            ###   ########.fr       */
+/*   Updated: 2019/06/21 07:56:58 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int pos, char *c))
 	int i;
 
 	if (s == NULL)
-		return;
+		return ;
 	i = 0;
 	while (s[i])
 	{

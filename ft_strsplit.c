@@ -6,12 +6,13 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 13:32:09 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/30 14:14:50 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/21 08:01:41 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
 static int	wordcount(char const *s, char c);
 static int	wordlen(char const *s, char c);
 
@@ -45,7 +46,6 @@ char	**ft_strsplit(char const *s, char c)
 		out[i][j] = '\0';
 		i++;
 	}
-	//printf("%d\n", wordcount(s, c));
 	return (out);
 }
 static int wordlen(char const *s, char c)

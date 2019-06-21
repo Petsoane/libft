@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/19 13:57:17 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/06/01 10:37:57 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/21 07:51:36 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putnbr(int num)
 	if (num < 10)
 	{
 		ft_putchar((num % 10) + '0');
-		return;
+		return ;
 	}
 	ft_putnbr(num / 10);
 	ft_putchar((num % 10) + '0');

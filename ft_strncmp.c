@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:59:49 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/05/28 13:34:34 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/06/21 07:59:37 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t len)
 
 	size1 = ft_strlen(s1);
 	size2 = ft_strlen(s2);
-	i = 0;	
+	i = 0;
 	if (size1 == 0 || size2 == 0)
 		return (size1 - size2);
 	while (s1[i] && s2[i] && i < len)
